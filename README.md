@@ -8,8 +8,9 @@
 ## Used strategy
 1. Write script to check if env has been commited
 2. Throw an error when env is commited
-2. Add github workflow code to run code on commit and before merging to main.
-3. As a security messure the envs can be fetched from git secrets this will make the introduction of env to code during builds way secure.
+3. Add github workflow code to run code on commit and before merging to main.
+4. As a security messure the envs can be fetched from git secrets this will make the introduction of env to code during builds way secure.
+5. Also it good to merge code to main though PR this will help prevent the PR from being merged if an action fails
 
 ## Flows verification
 You can check the actions to this repository to verify the instances of failed and successful tests.
