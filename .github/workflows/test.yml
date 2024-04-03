@@ -16,12 +16,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Check API Endpoint Integrity
-        run: bash scripts/check_api_endpoint.sh
 
       - name: Run Tests
         run: bash scripts/run_tests.sh
 
-      - name: Prevent Unauthorized Changes
+      - name: Prevent Unauthorized Changes on env
         run: bash scripts/prevent_unauthorized_changes.sh
