@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Assuming the environment file is named .env
-ENV_FILE=".env"
+# Assuming the environment file is named .env.prod
+ENV_FILE=".env.prod"
 
 # Check if the environment file exists
 if [ ! -f "$ENV_FILE" ]; then
