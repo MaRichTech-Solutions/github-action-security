@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  test_api:
+  test:
     runs-on: ubuntu-latest
 
     steps:
