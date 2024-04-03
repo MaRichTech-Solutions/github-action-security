@@ -1,8 +1,13 @@
 name: API Security Testing Workflow
 
 on:
+  push:
+    branches:
+      - main
+      
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   test_api:
