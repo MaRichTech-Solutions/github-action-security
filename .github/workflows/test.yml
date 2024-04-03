@@ -1,0 +1,23 @@
+name: API Security Testing Workflow
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test_api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Check API Endpoint Integrity
+        run: bash check_api_endpoint.sh
+
+      - name: Run Tests
+        run: bash run_tests.sh
+
+      - name: Prevent Unauthorized Changes
+        if: github.event_name == 'pull_request'
+        run: bash prevent_unauthorized_changes.sh
